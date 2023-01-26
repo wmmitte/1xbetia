@@ -1,0 +1,80 @@
+<h1>1xBet_IA</h1>
+<table border="0">
+  <tr>
+    <td>
+      <label for="budget"><strong>Budget</strong></label>
+    </td>
+    <td>
+      : <input type="text" name="budget" id="budget" onkeyup="evaluateIa();">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="cle"><strong>Clé</strong></label>
+    </td>
+    <td>
+      : <input type="text" name="cle" id="cle" onkeyup="evaluateIa();">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="cote"> <strong>Côte</strong></label>
+    </td>
+    <td>
+      : <input type="text" name="cote" id="cote" onkeyup="evaluateIa();">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="mise"><strong>Mise</strong> </label>
+    </td>
+    <td>
+      : <input type="text" name="mise" id="mise" onkeyup="evaluateIa();">
+    </td>
+  </tr>
+</table>
+<div style="border:1px dotted #EEE;"></div>
+<table id="bettable">
+  <tr>
+    <th>#</th>
+    <th>MISE</th>
+    <th>PERTE</th>
+    <th>GAIN</th>
+    <th>GAIN SOLDE</th>
+  </tr>
+  <tr id="l1">
+    <td><span id="1n">1</span></td>
+    <td><span id="1m"></span></td>
+    <td><span id="1p"></span></td>
+    <td><span id="1g"></span></td>
+    <td><span id="1s"></span></td>
+  </tr>
+  <tr id="l2">
+    <td><span id="2n">2</span></td>
+    <td><span id="2m"></span></td>
+    <td><span id="2p"></span></td>
+    <td><span id="2g"></span></td>
+    <td><span id="2s"></span></td>
+  </tr>
+  <tr id="l3">
+    <td><span id="3n">3</span></td>
+    <td><span id="3m"></span></td>
+    <td><span id="3p"></span></td>
+    <td><span id="3g"></span></td>
+    <td><span id="3s"></span></td>
+  </tr>
+  <tr id="l4">
+    <td><span id="4n">4</span></td>
+    <td><span id="4m"></span></td>
+    <td><span id="4p"></span></td>
+    <td><span id="4g"></span></td>
+    <td><span id="4s"></span></td>
+  </tr>
+  <tr id="l5">
+    <td><span id="5n">5</span></td>
+    <td><span id="5m"></span></td>
+    <td><span id="5p"></span></td>
+    <td><span id="5g"></span></td>
+    <td><span id="5s"></span></td>
+  </tr>
+</table>

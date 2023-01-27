@@ -1,4 +1,4 @@
-table {
+/*table {
   border-collapse: collapse;
 }
 table tr th {
@@ -8,7 +8,7 @@ table tr th {
 table tr th,
 td {
   text-align: right;
-}
+}*/
 
 .winner-row {
   color: green;

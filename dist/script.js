@@ -45,7 +45,7 @@ function evaluateIa() {
     parseFloat(_1gObj.innerHTML) > 0 &&
     parseFloat(_1pObj.innerHTML) < _budget
   ) {
-    document.getElementById("l1").className = "winner-row";
+    document.getElementById("l1").className = "text-green-500";
   }
 
   // line 2
@@ -60,7 +60,7 @@ function evaluateIa() {
     parseFloat(_2gObj.innerHTML) > 0 &&
     parseFloat(_2pObj.innerHTML) < _budget
   ) {
-    document.getElementById("l2").className = "winner-row";
+    document.getElementById("l2").className = "text-green-500";
   }
 
   // line 3
@@ -75,7 +75,7 @@ function evaluateIa() {
     parseFloat(_3gObj.innerHTML) > 0 &&
     parseFloat(_3pObj.innerHTML) < _budget
   ) {
-    document.getElementById("l3").className = "winner-row";
+    document.getElementById("l3").className = "text-green-500";
   }
 
   // line 4
@@ -90,7 +90,7 @@ function evaluateIa() {
     parseFloat(_4gObj.innerHTML) > 0 &&
     parseFloat(_4pObj.innerHTML) < _budget
   ) {
-    document.getElementById("l4").className = "winner-row";
+    document.getElementById("l4").className = "text-green-500";
   }
 
   // line 5
@@ -105,6 +105,8 @@ function evaluateIa() {
     parseFloat(_5gObj.innerHTML) > 0 &&
     parseFloat(_5pObj.innerHTML) < _budget
   ) {
-    document.getElementById("l5").className = "winner-row";
+    document.getElementById("l5").className = "text-green-500";
   }
 }
+
+evaluateIa();

@@ -3,94 +3,190 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Mitte - 1xBet_IA</title>
   <link rel="stylesheet" href="./style.css">
-
 </head>
 
-<body>
-  <!-- partial:index.partial.html -->
-  <h1>1xBet_IA</h1>
-  <table border="0">
-    <tr>
-      <td>
-        <label for="budget"><strong>Budget</strong></label>
-      </td>
-      <td>
-        : <input type="text" name="budget" id="budget" onkeyup="evaluateIa();">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <label for="cle"><strong>Clé</strong></label>
-      </td>
-      <td>
-        : <input type="text" name="cle" id="cle" onkeyup="evaluateIa();">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <label for="cote"> <strong>Côte</strong></label>
-      </td>
-      <td>
-        : <input type="text" name="cote" id="cote" onkeyup="evaluateIa();">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <label for="mise"><strong>Mise</strong> </label>
-      </td>
-      <td>
-        : <input type="text" name="mise" id="mise" onkeyup="evaluateIa();">
-      </td>
-    </tr>
-  </table>
-  <div style="border:1px dotted #EEE;"></div>
-  <table id="bettable">
-    <tr>
-      <th>#</th>
-      <th>MISE</th>
-      <th>PERTE</th>
-      <th>GAIN</th>
-      <th>GAIN SOLDE</th>
-    </tr>
-    <tr id="l1">
-      <td><span id="1n">1</span></td>
-      <td><span id="1m"></span></td>
-      <td><span id="1p"></span></td>
-      <td><span id="1g"></span></td>
-      <td><span id="1s"></span></td>
-    </tr>
-    <tr id="l2">
-      <td><span id="2n">2</span></td>
-      <td><span id="2m"></span></td>
-      <td><span id="2p"></span></td>
-      <td><span id="2g"></span></td>
-      <td><span id="2s"></span></td>
-    </tr>
-    <tr id="l3">
-      <td><span id="3n">3</span></td>
-      <td><span id="3m"></span></td>
-      <td><span id="3p"></span></td>
-      <td><span id="3g"></span></td>
-      <td><span id="3s"></span></td>
-    </tr>
-    <tr id="l4">
-      <td><span id="4n">4</span></td>
-      <td><span id="4m"></span></td>
-      <td><span id="4p"></span></td>
-      <td><span id="4g"></span></td>
-      <td><span id="4s"></span></td>
-    </tr>
-    <tr id="l5">
-      <td><span id="5n">5</span></td>
-      <td><span id="5m"></span></td>
-      <td><span id="5p"></span></td>
-      <td><span id="5g"></span></td>
-      <td><span id="5s"></span></td>
-    </tr>
-  </table>
-  <!-- partial -->
+<body class="bg-slate-400">
+  <div class="mx-auto w-11/12 md:11/12 mt-1 mb-2 p-5">
+
+    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+      <div class="md:flex">
+        <div class="md:shrink-0">
+          <img class="h-48 w-full object-cover md:h-full md:w-48"
+            src="https://footrdc.com/wp-content/uploads/2020/07/1xbet-iphone-android-foot-rdc.jpg"
+            md:src="https://www.lequipe.fr/_medias/img-photo-jpg/ea-sports-a-devoile-les-notes-des-dix-meilleurs-joueurs-de-ligue-1-sur-fifa-23-ea-sports/1500000001688403/0:0,1685:1124-828-552-75/1c443.jpg"
+            alt="1xBet_IA">
+        </div>
+        <div class="p-5">
+          <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Wmy - 1xBet IA</div>
+          <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Minimiser les
+            risques</a>
+          <p class="mt-2 text-slate-500">
+          <div class="col-span-3 sm:col-span-2">
+            <label for="budget" class="block text-sm font-medium text-gray-700"><strong>Budget</strong></label>
+            <div class="mt-1 flex rounded-md shadow-sm">
+              <span
+                class="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-sm text-gray-500">CFA</span>
+              <input type="text" name="budget" id="budget" onkeyup="evaluateIa();"
+                class="block w-full flex-1 rounded-none rounded-r-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="2000">
+            </div>
+          </div>
+          <div class="col-span-3 sm:col-span-2">
+            <label for="budget" class="block text-sm font-medium text-gray-700"><strong>Clé</strong></label>
+            <div class="mt-1 flex rounded-md shadow-sm">
+              <span
+                class="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-sm text-gray-500">$</span>
+              <input type="text" name="cle" id="cle" onkeyup="evaluateIa();"
+                class="block w-full flex-1 rounded-none rounded-r-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="2.5">
+            </div>
+          </div>
+          <div class="col-span-3 sm:col-span-2">
+            <label for="budget" class="block text-sm font-medium text-gray-700"><strong>Côte</strong></label>
+            <div class="mt-1 flex rounded-md shadow-sm">
+              <span
+                class="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-sm text-gray-500">^</span>
+              <input type="text" name="cote" id="cote" onkeyup="evaluateIa();"
+                class="block w-full flex-1 rounded-none rounded-r-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="1.67">
+            </div>
+          </div>
+          <div class="col-span-3 sm:col-span-2">
+            <label for="budget" class="block text-sm font-medium text-gray-700"><strong>1ere Mise</strong></label>
+            <div class="mt-1 flex rounded-md shadow-sm">
+              <span
+                class="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-sm text-gray-500">$</span>
+              <input type="text" name="mise" id="mise" onkeyup="evaluateIa();"
+                class="block w-full flex-1 rounded-none rounded-r-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="1.67">
+            </div>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4 -mb-3">
+      <div class="not-prose relative bg-slate-50 rounded-xl overflow-hidden">
+        <div style="background-position: 10px 10px;"
+          class="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]">
+        </div>
+        <div class="relative rounded-xl overflow-auto">
+          <div class="shadow-sm overflow-hidden my-8">
+            <table id="bettable" class="border-collapse table-auto w-full text-sm">
+              <thead>
+                <tr class="bg-slate-100">
+                  <th class="border-b font-medium p-4 pl-8 pt-0 pb-3 text-slate-600 text-left">
+                    N°</th>
+                  <th class="border-b font-medium p-4 pt-0 pb-3 text-slate-600 text-left">
+                    MISES</th>
+                  <th class="border-b font-medium p-4 pr-8 pt-0 pb-3 text-slate-600 text-left">
+                    PERTES</th>
+                  <th class="border-b font-medium p-4 pr-8 pt-0 pb-3 text-slate-600 text-left">
+                    GAINS</th>
+                  <th class="border-b font-medium p-4 pr-8 pt-0 pb-3 text-slate-600 text-left">
+                    SOLDE/GAIN</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white ">
+                <tr id="l1" class="text-slate-500">
+                  <td class="border-b border-indigo-100 p-4 pl-8">
+                    <span id="1n">1. </span>
+                  </td>
+                  <td class="border-b border-indigo-100 p-4">
+                    <span id="1m"></span>
+                  </td>
+                  <td class="border-b border-indigo-100 p-4 pr-8">
+                    <span id="1p"></span>
+                  </td>
+                  <td class="border-b border-indigo-100 p-4 pr-8">
+                    <span id="1g"></span>
+                  </td>
+                  <td class="border-b border-indigo-100 p-4 pr-8">
+                    <span id="1s"></span>
+                  </td>
+                </tr>
+                <tr id="l2" class="text-slate-500">
+                  <td class="border-b p-4 pl-8">
+                    <span id="2n">2. </span>
+                  </td>
+                  <td class="border-b p-4">
+                    <span id="2m"></span>
+                  </td>
+                  <td class="border-b p-4 pr-8">
+                    <span id="2p"></span>
+                  </td>
+                  <td class="border-b p-4 pr-8">
+                    <span id="2g"></span>
+                  </td>
+                  <td class="border-b p-4 pr-8">
+                    <span id="2s"></span>
+                  </td>
+                </tr>
+                <tr id="l3" class="text-slate-500">
+                  <td class="border-b border-slate-200 p-4 pl-8">
+                    <span id="3n">3. </span>
+                  </td>
+                  <td class="border-b border-slate-200 p-4">
+                    <span id="3m"></span>
+                  </td>
+                  <td class="border-b border-slate-200 p-4 pr-8">
+                    <span id="3p"></span>
+                  </td>
+                  <td class="border-b border-slate-200 p-4 pr-8">
+                    <span id="3g"></span>
+                  </td>
+                  <td class="border-b border-slate-200 p-4 pr-8">
+                    <span id="3s"></span>
+                  </td>
+                </tr>
+                <tr id="l4" class="text-slate-500">
+                  <td class="border-b border-slate-200 p-4 pl-8">
+                    <span id="4n">4. </span>
+                  </td>
+                  <td class="border-b border-slate-200 p-4">
+                    <span id="4m"></span>
+                  </td>
+                  <td class="border-b border-slate-200 p-4 pr-8">
+                    <span id="4p"></span>
+                  </td>
+                  <td class="border-b border-slate-200 p-4 pr-8">
+                    <span id="4g"></span>
+                  </td>
+                  <td class="border-b border-slate-200 p-4 pr-8">
+                    <span id="4s"></span>
+                  </td>
+                </tr>
+                <tr id="l5" class="text-slate-500">
+                  <td class="border-b border-slate-200 p-4 pl-8">
+                    <span id="5n">5. </span>
+                  </td>
+                  <td class="border-b border-slate-200 p-4">
+                    <span id="5m"></span>
+                  </td>
+                  <td class="border-b border-slate-200 p-4 pr-8">
+                    <span id="5p"></span>
+                  </td>
+                  <td class="border-b border-slate-200 p-4 pr-8">
+                    <span id="5g"></span>
+                  </td>
+                  <td class="border-b border-slate-200 p-4 pr-8">
+                    <span id="5s"></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="absolute inset-0 pointer-events-none border border-black/5 rounded-xl dark:border-white/5"></div>
+      </div>
+    </div>
+
+  </div>
   <script src="./script.js"></script>
 
 </body>

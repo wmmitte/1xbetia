@@ -8,11 +8,13 @@ table tr th {
 table tr th,
 td {
   text-align: right;
-}*/
+}
 
 .winner-row {
   color: green;
   font-size: 20px;
   font-weight: bold;
-  /* background-color: green;*/
+ 
 }
+
+*/

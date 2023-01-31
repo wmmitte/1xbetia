@@ -1,13 +1,13 @@
-document.getElementById("cle").value = 2.5;
+//document.getElementById("cle").value = 2.5;
 document.getElementById("cote").value = 1.7;
-document.getElementById("mise").value = 200;
-document.getElementById("budget").value = 2000;
+document.getElementById("mise").value = 2000;
+document.getElementById("budget").value = 20000;
 
 function evaluateIa() {
-  var _budget = Math.ceil(parseFloat(document.getElementById("budget").value));
-  var _cle = Math.ceil(parseFloat(document.getElementById("cle").value));
-  var _cote = Math.ceil(parseFloat(document.getElementById("cote").value));
-  var _mise = Math.ceil(parseFloat(document.getElementById("mise").value));
+  var _budget = parseFloat(document.getElementById("budget").value);
+  var _cle = 2.5; //parseFloat(document.getElementById("cle").value);
+  var _cote = parseFloat(document.getElementById("cote").value);
+  var _mise = parseFloat(document.getElementById("mise").value);
 
   var _1mObj = document.getElementById("1m");
   var _1pObj = document.getElementById("1p");
@@ -45,11 +45,11 @@ function evaluateIa() {
   _1mObj.innerHTML = _mise;
   _1pObj.innerHTML = _mise;
   _1gObj.innerHTML =
-    Math.ceil(parseFloat(_1mObj.innerHTML * _cote) - parseFloat(_1mObj.innerHTML));
+    parseFloat(_1mObj.innerHTML * _cote) - parseFloat(_1mObj.innerHTML);
   _1rObj.innerHTML =
-    _budget - Math.ceil(parseFloat(_1pObj.innerHTML));
+    _budget - parseFloat(_1pObj.innerHTML);
   
-  _1sObj.innerHTML = Math.ceil(_budget + parseFloat(_1gObj.innerHTML));
+  _1sObj.innerHTML = _budget + parseFloat(_1gObj.innerHTML);
   if (
     parseFloat(_1gObj.innerHTML) > 0 &&
     parseFloat(_1pObj.innerHTML) < _budget
@@ -63,13 +63,13 @@ function evaluateIa() {
   // line 2
   document.getElementById("l2").className = "";
   document.getElementById("2r").className = "";
-  _2mObj.innerHTML = Math.ceil(_mise * Math.pow(_cle, 1));
+  _2mObj.innerHTML = _mise * Math.pow(_cle, 1);
   _2pObj.innerHTML =
-    Math.ceil(parseFloat(_1pObj.innerHTML) + parseFloat(_2mObj.innerHTML));
+    parseFloat(_1pObj.innerHTML) + parseFloat(_2mObj.innerHTML);
   _2gObj.innerHTML =
-    Math.ceil(parseFloat(_2mObj.innerHTML) * _cote - parseFloat(_2pObj.innerHTML));
-  _2sObj.innerHTML = Math.ceil(_budget + parseFloat(_2gObj.innerHTML));
-  _2rObj.innerHTML = Math.ceil(_budget - parseFloat(_2pObj.innerHTML));
+    parseFloat(_2mObj.innerHTML) * _cote - parseFloat(_2pObj.innerHTML);
+  _2sObj.innerHTML = _budget + parseFloat(_2gObj.innerHTML);
+  _2rObj.innerHTML = _budget - parseFloat(_2pObj.innerHTML);
 
   if (
     parseFloat(_2gObj.innerHTML) > 0 &&
@@ -84,13 +84,13 @@ function evaluateIa() {
   // line 3
   document.getElementById("l3").className = "";
   document.getElementById("3r").className = "";
-  _3mObj.innerHTML = Math.ceil(_mise * Math.pow(_cle, 2));
+  _3mObj.innerHTML = _mise * Math.pow(_cle, 2);
   _3pObj.innerHTML =
-    Math.ceil(parseFloat(_2pObj.innerHTML) + parseFloat(_3mObj.innerHTML));
+    parseFloat(_2pObj.innerHTML) + parseFloat(_3mObj.innerHTML);
   _3gObj.innerHTML =
-    Math.ceil(parseFloat(_3mObj.innerHTML) * _cote - parseFloat(_3pObj.innerHTML));
-  _3sObj.innerHTML = Math.ceil(_budget + parseFloat(_3gObj.innerHTML));
-  _3rObj.innerHTML = Math.ceil(_budget - parseFloat(_3pObj.innerHTML));
+    parseFloat(_3mObj.innerHTML) * _cote - parseFloat(_3pObj.innerHTML);
+  _3sObj.innerHTML = _budget + parseFloat(_3gObj.innerHTML);
+  _3rObj.innerHTML = _budget - parseFloat(_3pObj.innerHTML);
   if (
     parseFloat(_3gObj.innerHTML) > 0 &&
     parseFloat(_3pObj.innerHTML) < _budget
@@ -104,13 +104,13 @@ function evaluateIa() {
   // line 4
   document.getElementById("l4").className = "";
   document.getElementById("4r").className = "";
-  _4mObj.innerHTML = Math.ceil(_mise * Math.pow(_cle, 3));
+  _4mObj.innerHTML = _mise * Math.pow(_cle, 3);
   _4pObj.innerHTML =
-    Math.ceil(parseFloat(_3pObj.innerHTML) + parseFloat(_4mObj.innerHTML));
+    parseFloat(_3pObj.innerHTML) + parseFloat(_4mObj.innerHTML);
   _4gObj.innerHTML =
-    Math.ceil(parseFloat(_4mObj.innerHTML) * _cote - parseFloat(_4pObj.innerHTML));
-  _4sObj.innerHTML = Math.ceil(_budget + parseFloat(_4gObj.innerHTML));
-  _4rObj.innerHTML = Math.ceil(_budget - parseFloat(_4pObj.innerHTML));
+    parseFloat(_4mObj.innerHTML) * _cote - parseFloat(_4pObj.innerHTML);
+  _4sObj.innerHTML = _budget + parseFloat(_4gObj.innerHTML);
+  _4rObj.innerHTML = _budget - parseFloat(_4pObj.innerHTML);
   if (
     parseFloat(_4gObj.innerHTML) > 0 &&
     parseFloat(_4pObj.innerHTML) < _budget
@@ -125,13 +125,13 @@ function evaluateIa() {
   // line 5
   document.getElementById("l5").className = "";
   document.getElementById("5r").className = "";
-  _5mObj.innerHTML = Math.ceil(_mise * Math.pow(_cle, 4));
+  _5mObj.innerHTML = _mise * Math.pow(_cle, 4);
   _5pObj.innerHTML =
-    Math.ceil(parseFloat(_4pObj.innerHTML) + parseFloat(_5mObj.innerHTML));
+    parseFloat(_4pObj.innerHTML) + parseFloat(_5mObj.innerHTML);
   _5gObj.innerHTML =
-    Math.ceil(parseFloat(_5mObj.innerHTML) * _cote - parseFloat(_5pObj.innerHTML));
-  _5sObj.innerHTML = Math.ceil(_budget + parseFloat(_5gObj.innerHTML));
-  _5rObj.innerHTML = Math.ceil(_budget - parseFloat(_5rObj.innerHTML));
+    parseFloat(_5mObj.innerHTML) * _cote - parseFloat(_5pObj.innerHTML);
+  _5sObj.innerHTML = _budget + parseFloat(_5gObj.innerHTML);
+  _5rObj.innerHTML = _budget - parseFloat(_5pObj.innerHTML);
   if (
     parseFloat(_5gObj.innerHTML) > 0 &&
     parseFloat(_5pObj.innerHTML) < _budget
